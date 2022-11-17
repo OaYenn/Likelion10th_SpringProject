@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+</head>
+<body>
+<h1>회원 등록 페이지입니다.</h1>
+    <div class="container">
+      <form action="/users/new" method="post">
+        <div class="form-group">
+            <label for="nickname">닉네임&nbsp&nbsp&nbsp</label>
+            <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력하세요"><br>
+            <label for="password">비밀번호 </label>
+            <input type="text" id="password" name="password" placeholder="비밀번호를 입력하세요"><br>
+            <label for="email">이메일&nbsp&nbsp&nbsp</label>
+            <input type="text" id="email" name="email" placeholder="이메일을 입력하세요"><br>
+        </div>
+        <button type="submit">등록</button>
+      </form>
+    </div>
+</body>
+</html>

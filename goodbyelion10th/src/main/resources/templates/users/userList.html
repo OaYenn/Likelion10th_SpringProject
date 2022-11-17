@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!-- 타임리프 사용하기 위해 추가 -->
+<head>
+    <meta charset="UTF-8">
+    <title>회원 조회</title>
+    <style>
+      td {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<h1>회원 조회 페이지입니다.</h1>
+  <div class="container">
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NICKNAME</th>
+            <th>EMAIL</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- th:each는 thymeleaf 문법으로, users 배열에 있는 아이템들을 하나씩 접근. (for문)
+          단, build.gradel에 라이브러리 추가 / application properties에 관련 설정 필요-->
+        <tr th:each="users : ${userList}">
+          <!-- User 객체의 getId, getName을 통해 id와 name값을 받아옴 -->
+          <td th:text="${users.id}"></td>
+          <td th:text="${users.nickname}"></td>
+          <td th:text="${users.email}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> <!-- /container -->
+</body>
+</html>
